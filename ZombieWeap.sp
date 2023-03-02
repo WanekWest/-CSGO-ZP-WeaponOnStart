@@ -24,6 +24,8 @@ public Action Event_OnRoundStart(Event event, const char[] name, bool dbc)
 		if (IsClientValid(i, true, true))
 			SendClientWeaponMenu(i);
 	}
+
+	return Plugin_Continue;
 }
 
 public Action SendClientWeaponMenu(int iClient)
@@ -34,6 +36,8 @@ public Action SendClientWeaponMenu(int iClient)
 	hMenu.AddItem("item2", "М4А1");
 	hMenu.AddItem("item3", "М4А1 Silelncer");
 	hMenu.Display(iClient, 10);
+
+	return Plugin_Continue;
 }
 
 public Action SendClientPistolMenu(int iClient)
@@ -44,6 +48,8 @@ public Action SendClientPistolMenu(int iClient)
 	pMenu.AddItem("item2", "Deagle");
 	pMenu.AddItem("item3", "Usp-s");
 	pMenu.Display(iClient, 10);
+
+	return Plugin_Continue;
 }
 
 public Action SendClientKnifeMenu(int iClient)
@@ -54,6 +60,8 @@ public Action SendClientKnifeMenu(int iClient)
 	tMenu.AddItem("item3", "Хаммер[Admin]");
 	tMenu.AddItem("item4", "Топор[Boss]");
 	tMenu.Display(iClient, 10);
+
+	return Plugin_Continue;
 }
 
 public int Menu_Weapons(Menu hMenu, MenuAction action, int iClient, int iItem)
